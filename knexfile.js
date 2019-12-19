@@ -1,9 +1,16 @@
-// Update with your config settings.
+require('dotenv').config();
+
+const localPg = {
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_DATABASE
+};
 
 module.exports = {
   development: {
     client: 'pg',
-    connection: process.env.DB_URL,
+    connection: localPg,
     migrations: {
       directory: './database/migrations'
     },
