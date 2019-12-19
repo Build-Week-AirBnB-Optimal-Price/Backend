@@ -8,7 +8,7 @@ module.exports = {
 async function addUser(user) {
   const [id] = await db('users').insert(user);
   return await db('users')
-    .select('id', 'username')
+    .returning('id', 'username')
     .where({ id })
     .first();
 }
