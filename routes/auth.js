@@ -37,7 +37,6 @@ const User = require('../models/User-model');
  *        "username" : "xX_DarthVader_Xx"
  *      },
  *    "token" : "a really long string of letters and numbers, separated by dots"
- *
  * }
  */
 
@@ -65,8 +64,37 @@ router.post('/register', async (req, res) => {
   }
 });
 
-// @ROUTE       POST /register
-// @DESC        Registers a user
+/**
+ * @api {post} /login Logs a user in
+ * @apiName Login
+ * @apiGroup Accounts
+ *
+ * @apiparam {String} username User's username
+ * @apiparam {String} password User's password
+ *
+ * @apiParamExample Example Body:
+ * {
+ *    "username" : "TheRealYoda",
+ *    "password" : "GreenIAm"
+ * }
+ *
+ * @apiSuccess {Number} id User's account id
+ * @apisuccess {String} message User greeting
+ * @apisuccess {String} token JWT generated for the user
+ *
+ * @apiSuccessExample Successful response:
+ *    HTTP/1.1 201 OK
+ * {
+ *    "user": {
+ *        "id" : 10,
+ *        "message" : "Welcome back, TheRealYoda"
+ *      },
+ *    "token" : "a really long string of letters and numbers, separated by dots"
+ * }
+ */
+
+// @ROUTE       POST /login
+// @DESC        Logs in a user
 // @ACCESS      PUBLIC
 router.post('/login', async (req, res) => {
   const { body } = req;
