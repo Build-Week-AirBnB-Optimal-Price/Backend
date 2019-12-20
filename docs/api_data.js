@@ -3,6 +3,7 @@ define({ "api": [
     "type": "post",
     "url": "/login",
     "title": "Logs a user in",
+    "version": "1.0.0",
     "name": "Login",
     "group": "Accounts",
     "parameter": {
@@ -66,7 +67,6 @@ define({ "api": [
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "routes/auth.js",
     "groupTitle": "Accounts"
   },
@@ -74,6 +74,7 @@ define({ "api": [
     "type": "post",
     "url": "/register",
     "title": "Registers a user",
+    "version": "1.0.0",
     "name": "Register",
     "group": "Accounts",
     "parameter": {
@@ -158,7 +159,6 @@ define({ "api": [
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "routes/auth.js",
     "groupTitle": "Accounts"
   }

@@ -7,6 +7,7 @@ const User = require('../models/User-model');
 
 /**
  * @api {post} /register Registers a user
+ * @apiVersion 1.0.0
  * @apiName Register
  * @apiGroup Accounts
  *
@@ -66,6 +67,7 @@ router.post('/register', async (req, res) => {
 
 /**
  * @api {post} /login Logs a user in
+ * @apiVersion 1.0.0
  * @apiName Login
  * @apiGroup Accounts
  *
