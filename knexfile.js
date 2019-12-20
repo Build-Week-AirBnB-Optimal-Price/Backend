@@ -7,10 +7,10 @@ module.exports = {
     connection: process.env.DATABASE_URL,
     useNullAsDefault: true,
     migrations: {
-      directory: './database/migrations'
+      directory: __dirname + '/database/migrations'
     },
     seeds: {
-      directory: './database/seeds'
+      directory: __dirname + '/database/seeds'
     }
   },
   testing: {
@@ -18,20 +18,20 @@ module.exports = {
     connection: process.env.DATABASE_URL,
     useNullAsDefault: true,
     migrations: {
-      directory: './database/migrations'
+      directory: __dirname + '/database/migrations'
     },
     seeds: {
-      directory: './database/seeds'
+      directory: __dirname + '/database/seeds'
     }
   },
   production: {
     client: 'pg',
     connection: process.env.DATABASE_URL,
     migrations: {
-      directory: './database/migrations'
+      directory: __dirname + '/database/migrations'
     },
     seeds: {
-      directory: './database/seeds'
+      directory: __dirname + '/database/seeds'
     }
   }
 };
