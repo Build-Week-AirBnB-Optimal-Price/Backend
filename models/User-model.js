@@ -5,10 +5,16 @@ module.exports = {
   findUserBy
 };
 
-async function addUser(user) {
-  const [id] = await db('users').insert(user);
-  return await db('users')
-    .returning('id', 'username')
+function addUser(user) {
+  return db('users')
+    .insert(user)
+    .returning('id')
+    .then(ids => findById(ids[0]));
+}
+
+function findById(id) {
+  return db('users')
+    .select('id', 'username')
     .where({ id })
     .first();
 }

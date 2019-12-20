@@ -53,7 +53,7 @@ router.post('/login', async (req, res) => {
     } else {
       res.status(401).json({ message: 'Incorrect Username/Password' });
     }
-  } catch (error) {
+  } catch (err) {
     console.log(err);
     res.status(500).json({ message: 'Server Error' });
   }
