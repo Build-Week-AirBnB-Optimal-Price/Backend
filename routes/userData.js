@@ -94,4 +94,21 @@ router.put(
   }
 );
 
+// @ROUTE       Delete /user/:id
+// @DESC        Delete a user
+// @ACCESS      Private
+router.delete('/:id', auth, verifyRoute, async (req, res) => {
+  const { id } = req.params;
+  try {
+    await User.removeUser(id);
+
+    res.status(200).json({
+      message: 'Your account has been successfully deleted'
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: 'Something went wrong' });
+  }
+});
+
 module.exports = router;
