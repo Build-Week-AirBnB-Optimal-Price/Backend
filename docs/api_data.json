@@ -67,7 +67,7 @@
         }
       ]
     },
-    "filename": "routes/auth.js",
+    "filename": "routes/docs/auth_doc.js",
     "groupTitle": "Accounts"
   },
   {
@@ -159,7 +159,7 @@
         }
       ]
     },
-    "filename": "routes/auth.js",
+    "filename": "routes/docs/auth_doc.js",
     "groupTitle": "Accounts"
   },
   {
@@ -217,7 +217,7 @@
         }
       ]
     },
-    "filename": "routes/userData.js",
+    "filename": "routes/docs/userData_doc.js",
     "groupTitle": "Accounts"
   },
   {
@@ -330,7 +330,7 @@
         }
       ]
     },
-    "filename": "routes/userData.js",
+    "filename": "routes/docs/userData_doc.js",
     "groupTitle": "Accounts"
   }
 ]
