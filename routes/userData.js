@@ -14,9 +14,16 @@ const User = require('../models/User-model');
 router.get('/:id', auth, verifyRoute, async (req, res) => {
   const { id } = req.params;
   try {
-    const user = await User.findById(id);
+    const user = await User.findUserBy({ id });
+    const cleanUser = new Object({
+      id: user.id,
+      first_name: user.first_name,
+      last_name: user.last_name,
+      email: user.email,
+      username: user.username
+    });
 
-    res.json(user);
+    res.status(200).json(cleanUser);
   } catch (err) {
     // catch errors
   }
