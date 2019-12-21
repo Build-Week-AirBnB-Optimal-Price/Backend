@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "server": "nodemon index.js",
-    "test": "cross-env DB_ENV=testing jest --watch",
+    "test": "cross-env NODE_ENV=testing jest --watch",
     "document": "apidoc -i ./routes -e node_modules -o ./docs"
   },
   "keywords": [],
@@ -22,8 +22,8 @@
     "helmet": "^3.21.2",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.20.4",
-    "pg": "^7.15.0",
-    "sqlite3": "^4.1.1"
+    "knex-cleaner": "^1.3.0",
+    "pg": "^7.15.0"
   },
   "devDependencies": {
     "cross-env": "^6.0.3",

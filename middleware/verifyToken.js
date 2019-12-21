@@ -19,11 +19,11 @@ module.exports = (req, res, next) => {
         if (err) {
           // reject
           res.status(401).json({
-            message: 'Something went wrong, please try signing in again'
+            message: 'Unauthorized access, please try signing in again'
           });
         } else {
           // if not, add the decoded token to the request
-          req.decodedJwt = decoded;
+          req.user = decoded;
           // proceed to the next function
           next();
         }
