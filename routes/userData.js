@@ -17,7 +17,9 @@ router.get('/:id', auth, verifyRoute, async (req, res) => {
     const user = await User.findById(id);
 
     res.json(user);
-  } catch (err) {}
+  } catch (err) {
+    // catch errors
+  }
 });
 
 module.exports = router;
