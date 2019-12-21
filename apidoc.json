@@ -3,6 +3,5 @@
   "version": "1.0.0",
   "description": "This is the API for the AirBnB Optimal Pricing app",
   "title": "Optimal AirBnB Pricing API",
-  "url": "https://optimal-airbnb-pricing-api.herokuapp.com",
   "order": ["Register", "Login"]
 }
