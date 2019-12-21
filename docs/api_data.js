@@ -1,8 +1,38 @@
 define({ "api": [
   {
+    "type": "delete",
+    "url": "/user/:id",
+    "title": "Delete user info",
+    "version": "1.0.0",
+    "name": "Delete_User",
+    "group": "Accounts",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message of success</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Successful response:",
+          "content": "   HTTP/1.1 200 OK\n{\n   \"message\" : \"Your account has been successfully deleted\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/docs/userData_doc.js",
+    "groupTitle": "Accounts"
+  },
+  {
     "type": "post",
     "url": "/login",
-    "title": "Log a user in",
+    "title": "Log user in",
     "version": "1.0.0",
     "name": "Login",
     "group": "Accounts",
@@ -73,7 +103,7 @@ define({ "api": [
   {
     "type": "post",
     "url": "/register",
-    "title": "Register a user",
+    "title": "Register user",
     "version": "1.0.0",
     "name": "Register",
     "group": "Accounts",
@@ -165,9 +195,9 @@ define({ "api": [
   {
     "type": "get",
     "url": "/user/:id",
-    "title": "Retrieve a user's information",
+    "title": "Retrieve user info",
     "version": "1.0.0",
-    "name": "Retrieve_User_Info",
+    "name": "Retrieve_User",
     "group": "Accounts",
     "success": {
       "fields": {
@@ -223,7 +253,7 @@ define({ "api": [
   {
     "type": "put",
     "url": "/user/:id",
-    "title": "Update a user's info",
+    "title": "Update user info",
     "version": "1.0.0",
     "name": "Update_User",
     "group": "Accounts",

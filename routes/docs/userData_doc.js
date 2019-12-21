@@ -1,7 +1,7 @@
 /**
- * @api {get} /user/:id Retrieve a user's information
+ * @api {get} /user/:id Retrieve user info
  * @apiVersion 1.0.0
- * @apiName Retrieve User Info
+ * @apiName Retrieve User
  * @apiGroup Accounts
  *
  * @apiSuccess {Number} id User's account id
@@ -22,7 +22,7 @@
  */
 
 /**
- * @api {put} /user/:id Update a user's info
+ * @api {put} /user/:id Update user info
  * @apiVersion 1.0.0
  * @apiName Update User
  * @apiGroup Accounts
@@ -59,5 +59,20 @@
  *        "username" : "xX_OldDarthVader_Xx"
  *    },
  *    "message": "Account info updated successfully"
+ * }
+ */
+
+/**
+ * @api {delete} /user/:id Delete user info
+ * @apiVersion 1.0.0
+ * @apiName Delete User
+ * @apiGroup Accounts
+ *
+ * @apisuccess {String} message Message of success
+ *
+ * @apiSuccessExample Successful response:
+ *    HTTP/1.1 200 OK
+ * {
+ *    "message" : "Your account has been successfully deleted"
  * }
  */

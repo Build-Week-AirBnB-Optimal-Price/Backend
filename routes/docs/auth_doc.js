@@ -1,5 +1,5 @@
 /**
- * @api {post} /register Register a user
+ * @api {post} /register Register user
  * @apiVersion 1.0.0
  * @apiName Register
  * @apiGroup Accounts
@@ -35,7 +35,7 @@
  */
 
 /**
- * @api {post} /login Log a user in
+ * @api {post} /login Log user in
  * @apiVersion 1.0.0
  * @apiName Login
  * @apiGroup Accounts
