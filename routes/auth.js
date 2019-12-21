@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs');
 const genToken = require('../auth/generateToken');
 
 const User = require('../models/User-model');
+const checkInUse = require('../middleware/checkInUse');
 
 /**
  * @api {post} /register Registers a user
@@ -44,7 +45,7 @@ const User = require('../models/User-model');
 // @ROUTE       POST /register
 // @DESC        Registers a user
 // @ACCESS      PUBLIC
-router.post('/register', async (req, res) => {
+router.post('/register', checkInUse, async (req, res) => {
   const { body } = req;
   const { first_name, last_name, email, username, password } = body;
   if (!first_name || !last_name || !email || !username || !password) {
