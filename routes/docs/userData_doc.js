@@ -27,11 +27,11 @@
  * @apiName Update User
  * @apiGroup Accounts
  *
- * @apiparam {String} first_name User's firstname - optional
- * @apiparam {String} last_name User's lastname - optional
- * @apiparam {String} email User's email - must be unique, but is optional
- * @apiparam {String} username User's username - must be unique, but is optional
- * @apiparam {String} password User's password - optional
+ * @apiparam {String} [first_name] User's firstname
+ * @apiparam {String} [last_name] User's lastname
+ * @apiparam {String} [email] User's email - must be unique
+ * @apiparam {String} [username] User's username - must be unique
+ * @apiparam {String} [password] User's password
  *
  * @apiParamExample Example Body:
  * {
@@ -42,10 +42,10 @@
  * }
  *
  * @apiSuccess {Number} id User's account id
- * @apiSuccess {String} first_name User's firstname - optional based on above
- * @apiSuccess {String} last_name User's lastname - optional based on above
- * @apiSuccess {String} email User's email - must be unique, but is optional based on above
- * @apiSuccess {String} username User's username - must be unique, but is optional based on above
+ * @apiSuccess {String} [first_name] User's firstname
+ * @apiSuccess {String} [last_name] User's lastname
+ * @apiSuccess {String} [email] User's email - must be unique
+ * @apiSuccess {String} [username] User's username - must be unique
  * @apisuccess {String} message Success message upon completion of account update
  *
  * @apiSuccessExample Successful response:

@@ -263,37 +263,37 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "first_name",
-            "description": "<p>User's firstname - optional</p>"
+            "description": "<p>User's firstname</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "last_name",
-            "description": "<p>User's lastname - optional</p>"
+            "description": "<p>User's lastname</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "email",
-            "description": "<p>User's email - must be unique, but is optional</p>"
+            "description": "<p>User's email - must be unique</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "username",
-            "description": "<p>User's username - must be unique, but is optional</p>"
+            "description": "<p>User's username - must be unique</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "password",
-            "description": "<p>User's password - optional</p>"
+            "description": "<p>User's password</p>"
           }
         ]
       },
@@ -318,30 +318,30 @@
           {
             "group": "Success 200",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "first_name",
-            "description": "<p>User's firstname - optional based on above</p>"
+            "description": "<p>User's firstname</p>"
           },
           {
             "group": "Success 200",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "last_name",
-            "description": "<p>User's lastname - optional based on above</p>"
+            "description": "<p>User's lastname</p>"
           },
           {
             "group": "Success 200",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "email",
-            "description": "<p>User's email - must be unique, but is optional based on above</p>"
+            "description": "<p>User's email - must be unique</p>"
           },
           {
             "group": "Success 200",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "username",
-            "description": "<p>User's username - must be unique, but is optional based on above</p>"
+            "description": "<p>User's username - must be unique</p>"
           },
           {
             "group": "Success 200",
