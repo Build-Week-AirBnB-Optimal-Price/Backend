@@ -23,7 +23,7 @@ module.exports = (req, res, next) => {
           });
         } else {
           // if not, add the decoded token to the request
-          req.decodedJwt = decoded;
+          req.user = decoded;
           // proceed to the next function
           next();
         }
