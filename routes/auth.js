@@ -7,7 +7,7 @@ const User = require('../models/User-model');
 const checkInUse = require('../middleware/checkInUse');
 
 /**
- * @api {post} /register Registers a user
+ * @api {post} /register Register a user
  * @apiVersion 1.0.0
  * @apiName Register
  * @apiGroup Accounts
@@ -77,7 +77,7 @@ router.post('/register', checkInUse, async (req, res) => {
 });
 
 /**
- * @api {post} /login Logs a user in
+ * @api {post} /login Log a user in
  * @apiVersion 1.0.0
  * @apiName Login
  * @apiGroup Accounts
