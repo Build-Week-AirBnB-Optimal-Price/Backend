@@ -6,7 +6,7 @@ module.exports = generateToken;
 function generateToken(user) {
   // payload will include the user id
   const payload = {
-    user_id: user.id
+    id: user.id
   };
 
   // jwt options

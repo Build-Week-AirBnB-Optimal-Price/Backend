@@ -55,22 +55,20 @@ router.post('/login', async (req, res) => {
 
   try {
     // Using the username above, we'll check the db for a match
-    const user = await User.findUserBy({ username });
+    const userInfo = await User.findUserBy({ username });
 
     // if the user exists, we'll use compareSync on bcrypt
     // by passing in the password from the request,
     // and the password from the user we returned from the db
     // this will return a true or false if there's a match
-    if (user && bcrypt.compareSync(password, user.password)) {
+    if (userInfo && bcrypt.compareSync(password, userInfo.password)) {
       // if both return true, we'll generate a token using the user object above
-      const token = genToken(user);
-      // we'll also pull the id from the user
-      const { id } = user;
+      const token = genToken(userInfo);
       // we'll respond with the user id, a welcome message, and the token
       res.status(200).json({
         user: {
-          id,
-          message: `Welcome back, ${user.first_name}`
+          id: userInfo.id,
+          message: `Welcome back, ${userInfo.first_name}`
         },
         token
       });
