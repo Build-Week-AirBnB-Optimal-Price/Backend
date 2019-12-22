@@ -2,7 +2,7 @@
  * @api {get} /user/:id Retrieve user info
  * @apiVersion 1.0.0
  * @apiName Retrieve User
- * @apiGroup Accounts
+ * @apiGroup User Account
  *
  * @apiSuccess {Number} id User's account id
  * @apisuccess {String} first_name User's firstname
@@ -25,7 +25,7 @@
  * @api {put} /user/:id Update user info
  * @apiVersion 1.0.0
  * @apiName Update User
- * @apiGroup Accounts
+ * @apiGroup User Account
  *
  * @apiparam {String} [first_name] User's firstname
  * @apiparam {String} [last_name] User's lastname
@@ -66,7 +66,7 @@
  * @api {delete} /user/:id Delete user info
  * @apiVersion 1.0.0
  * @apiName Delete User
- * @apiGroup Accounts
+ * @apiGroup User Account
  *
  * @apisuccess {String} message Message of success
  *

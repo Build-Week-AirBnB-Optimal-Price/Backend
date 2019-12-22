@@ -1,41 +1,11 @@
 [
   {
-    "type": "delete",
-    "url": "/user/:id",
-    "title": "Delete user info",
-    "version": "1.0.0",
-    "name": "Delete_User",
-    "group": "Accounts",
-    "success": {
-      "fields": {
-        "Success 200": [
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "message",
-            "description": "<p>Message of success</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Successful response:",
-          "content": "   HTTP/1.1 200 OK\n{\n   \"message\" : \"Your account has been successfully deleted\"\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "filename": "routes/docs/userData_doc.js",
-    "groupTitle": "Accounts"
-  },
-  {
     "type": "post",
     "url": "/login",
     "title": "Log user in",
     "version": "1.0.0",
     "name": "Login",
-    "group": "Accounts",
+    "group": "Authorization",
     "parameter": {
       "fields": {
         "Parameter": [
@@ -98,7 +68,7 @@
       ]
     },
     "filename": "routes/docs/auth_doc.js",
-    "groupTitle": "Accounts"
+    "groupTitle": "Authorization"
   },
   {
     "type": "post",
@@ -106,7 +76,7 @@
     "title": "Register user",
     "version": "1.0.0",
     "name": "Register",
-    "group": "Accounts",
+    "group": "Authorization",
     "parameter": {
       "fields": {
         "Parameter": [
@@ -190,7 +160,37 @@
       ]
     },
     "filename": "routes/docs/auth_doc.js",
-    "groupTitle": "Accounts"
+    "groupTitle": "Authorization"
+  },
+  {
+    "type": "delete",
+    "url": "/user/:id",
+    "title": "Delete user info",
+    "version": "1.0.0",
+    "name": "Delete_User",
+    "group": "User_Account",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message of success</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Successful response:",
+          "content": "   HTTP/1.1 200 OK\n{\n   \"message\" : \"Your account has been successfully deleted\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/docs/userData_doc.js",
+    "groupTitle": "User_Account"
   },
   {
     "type": "get",
@@ -198,7 +198,7 @@
     "title": "Retrieve user info",
     "version": "1.0.0",
     "name": "Retrieve_User",
-    "group": "Accounts",
+    "group": "User_Account",
     "success": {
       "fields": {
         "Success 200": [
@@ -248,7 +248,7 @@
       ]
     },
     "filename": "routes/docs/userData_doc.js",
-    "groupTitle": "Accounts"
+    "groupTitle": "User_Account"
   },
   {
     "type": "put",
@@ -256,7 +256,7 @@
     "title": "Update user info",
     "version": "1.0.0",
     "name": "Update_User",
-    "group": "Accounts",
+    "group": "User_Account",
     "parameter": {
       "fields": {
         "Parameter": [
@@ -361,6 +361,6 @@
       ]
     },
     "filename": "routes/docs/userData_doc.js",
-    "groupTitle": "Accounts"
+    "groupTitle": "User_Account"
   }
 ]
