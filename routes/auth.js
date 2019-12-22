@@ -6,6 +6,48 @@ const genToken = require('../auth/generateToken');
 const User = require('../models/User-model');
 const checkInUse = require('../middleware/checkInUse');
 
+// @ROUTE       POST /login
+// @DESC        Logs in a user
+// @ACCESS      PUBLIC
+router.post('/login', async (req, res) => {
+  // we'll pull the body from the request
+  const { body } = req;
+  // pull the username and password from the body
+  const { username, password } = body;
+  // if the username or password don't exist in the request - reject
+  if (!username || !password) {
+    res.status(400).json({ message: 'All fields are required' });
+  }
+
+  try {
+    // Using the username above, we'll check the db for a match
+    const userInfo = await User.findUserBy({ username });
+    // if the user exists, we'll use compareSync on bcrypt
+    // by passing in the password from the request,
+    // and the password from the user we returned from the db
+    // this will return a true or false if there's a match
+    if (userInfo && bcrypt.compareSync(password, userInfo.password)) {
+      // if both return true, we'll generate a token using the user object above
+      const token = genToken(userInfo);
+      // we'll respond with the user id, a welcome message, and the token
+      res.status(200).json({
+        user: {
+          id: userInfo.id,
+          message: `Welcome back, ${userInfo.first_name}`
+        },
+        token
+      });
+    } else {
+      // if either no user is returned or the password doesn't match - reject
+      res.status(401).json({ message: 'Incorrect Username/Password' });
+    }
+  } catch (err) {
+    // catch errors
+    console.log(err);
+    res.status(500).json({ message: 'Server Error' });
+  }
+});
+
 // @ROUTE       POST /register
 // @DESC        Registers a user
 // @ACCESS      PUBLIC
@@ -33,49 +75,6 @@ router.post('/register', checkInUse, async (req, res) => {
 
     // respond with the user information and the token
     res.status(201).json({ user, token });
-  } catch (err) {
-    // catch errors
-    console.log(err);
-    res.status(500).json({ message: 'Server Error' });
-  }
-});
-
-// @ROUTE       POST /login
-// @DESC        Logs in a user
-// @ACCESS      PUBLIC
-router.post('/login', async (req, res) => {
-  // we'll pull the body from the request
-  const { body } = req;
-  // pull the username and password from the body
-  const { username, password } = body;
-  // if the username or password don't exist in the request - reject
-  if (!username || !password) {
-    res.status(400).json({ message: 'All fields are required' });
-  }
-
-  try {
-    // Using the username above, we'll check the db for a match
-    const userInfo = await User.findUserBy({ username });
-
-    // if the user exists, we'll use compareSync on bcrypt
-    // by passing in the password from the request,
-    // and the password from the user we returned from the db
-    // this will return a true or false if there's a match
-    if (userInfo && bcrypt.compareSync(password, userInfo.password)) {
-      // if both return true, we'll generate a token using the user object above
-      const token = genToken(userInfo);
-      // we'll respond with the user id, a welcome message, and the token
-      res.status(200).json({
-        user: {
-          id: userInfo.id,
-          message: `Welcome back, ${userInfo.first_name}`
-        },
-        token
-      });
-    } else {
-      // if either no user is returned or the password doesn't match - reject
-      res.status(401).json({ message: 'Incorrect Username/Password' });
-    }
   } catch (err) {
     // catch errors
     console.log(err);

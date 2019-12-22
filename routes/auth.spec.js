@@ -12,6 +12,30 @@ describe('Auth.js', () => {
     await db('users').truncate();
   });
 
+  describe('/login route', () => {
+    it('returns a status of 200 if login is successful', async () => {
+      let user = {
+        first_name: 'Kanan',
+        last_name: 'Jarrus',
+        email: 'kjarrus@rebels.com',
+        username: 'CowboyJedi',
+        password: 'SurvivingPadawan'
+      };
+
+      const res1 = await request(server)
+        .post('/register')
+        .send(user);
+
+      expect(res1.status).toBe(201);
+
+      const res2 = await request(server)
+        .post('/login')
+        .send(user);
+
+      expect(res2.status).toBe(200);
+    });
+  });
+
   describe('/Register route', () => {
     it('returns a status of 201 if required fields are filled', async () => {
       let user = {
@@ -43,30 +67,6 @@ describe('Auth.js', () => {
         .send(user);
 
       expect(res.status).toBe(400);
-    });
-  });
-
-  describe('/login route', () => {
-    it('returns a status of 200 if login is successful', async () => {
-      let user = {
-        first_name: 'Ahsoka',
-        last_name: 'Tano',
-        email: 'atano@rebels.com',
-        username: 'Atano',
-        password: 'DualSabers'
-      };
-
-      const res1 = await request(server)
-        .post('/register')
-        .send(user);
-
-      expect(res1.status).toBe(201);
-
-      const res2 = await request(server)
-        .post('/login')
-        .send(user);
-
-      expect(res2.status).toBe(200);
     });
   });
 });
