@@ -1,7 +1,8 @@
 exports.up = function(knex) {
-  return knex.schema.createTable('user_saved_airbnbs', tbl => {
+  return knex.schema.createTable('user_airbnb', tbl => {
     tbl.increments();
 
+    // foreign key tying property to user
     tbl
       .integer('host_id')
       .unsigned()
@@ -12,25 +13,24 @@ exports.up = function(knex) {
       .onUpdate('CASCADE')
       .onDelete('CASCADE');
 
-    tbl.date('host_since');
-    tbl.string('zip_code', 255);
-    tbl.string('amenities', 255);
-    tbl.string('room_type', 255);
-    tbl.integer('max_nights');
-    tbl.integer('min_nights');
-    tbl.integer('extra_person_cost');
-    tbl.integer('accomodates');
-    tbl.string('neighborhood', 255);
-    tbl.integer('beds');
-    tbl.string('property_type', 255);
-    tbl.string('cancellation_policy', 255);
-    tbl.integer('included_guests');
-    tbl.integer('bedrooms');
-    tbl.integer('bathrooms');
-    tbl.string('optimal_pricing', 255);
+    tbl.string('name', 255).notNullable();
+    tbl.string('host_since', 255).notNullable();
+    tbl.string('zipcode', 255).notNullable();
+    tbl.string('room_type').notNullable();
+    tbl.integer('max_nights').notNullable();
+    tbl.integer('min_nights').notNullable();
+    tbl.integer('extra_people').notNullable();
+    tbl.integer('accomodates').notNullable();
+    tbl.string('neighborhood').notNullable();
+    tbl.integer('beds').notNullable();
+    tbl.string('property_type', 255).notNullable();
+    tbl.string('cancel_policy', 255).notNullable();
+    tbl.integer('guests').notNullable();
+    tbl.integer('bedrooms').notNullable();
+    tbl.integer('bathrooms').notNullable();
   });
 };
 
 exports.down = function(knex) {
-  return knex.schema.dropTableIfExists('user_saved_airbnbs');
+  return knex.schema.dropTableIfExists('user_airbnb');
 };
