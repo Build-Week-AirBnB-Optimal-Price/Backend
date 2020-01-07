@@ -27,6 +27,7 @@ exports.up = function(knex) {
     tbl.integer('included_guests');
     tbl.integer('bedrooms');
     tbl.integer('bathrooms');
+    tbl.string('optimal_pricing', 255);
   });
 };
 
