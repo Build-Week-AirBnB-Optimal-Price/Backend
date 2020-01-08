@@ -4,6 +4,8 @@
  * @apiName Retrieve User
  * @apiGroup User Account
  *
+ * @apiDescription If a user is logged in, this route retrieves all their info
+ *
  * @apiSuccess {Number} id User's account id
  * @apisuccess {String} first_name User's firstname
  * @apisuccess {String} last_name User's lastname
@@ -26,6 +28,8 @@
  * @apiVersion 1.0.0
  * @apiName Update User
  * @apiGroup User Account
+ *
+ * @apiDescription If a user is logged in, this will allow you to update their information
  *
  * @apiparam {String} [first_name] User's firstname
  * @apiparam {String} [last_name] User's lastname
@@ -67,6 +71,8 @@
  * @apiVersion 1.0.0
  * @apiName Delete User
  * @apiGroup User Account
+ *
+ * @apiDescription If a user is logged in, they can delete their account
  *
  * @apisuccess {String} message Message of success
  *
