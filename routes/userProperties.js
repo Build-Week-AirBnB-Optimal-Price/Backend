@@ -18,7 +18,7 @@ router.get('/:userID/properties/', async (req, res) => {
       res.status(200).json({ message: 'There are no properties saved' });
     }
 
-    res.status(200).json(userData);
+    res.status(200).json({ user_properties: userData });
   } catch (err) {
     // catch errors
     console.log(err);
@@ -51,7 +51,57 @@ router.get('/:userID/properties/:propID', async (req, res) => {
 // @DESC        Add a property to the user's account
 // @ACCESS      Private
 router.post('/:userID/properties/', async (req, res) => {
+  const { userID } = req.params;
+  const { body } = req;
+  const {
+    name,
+    host_since,
+    zipcode,
+    room_type,
+    max_nights,
+    min_nights,
+    extra_people,
+    accomodates,
+    neighborhood,
+    beds,
+    property_type,
+    cancel_policy,
+    guests,
+    bedrooms,
+    bathrooms,
+    optimal_price
+  } = body;
+
+  if (
+    !name ||
+    !host_since ||
+    !zipcode ||
+    !room_type ||
+    !max_nights ||
+    !min_nights ||
+    !extra_people ||
+    !accomodates ||
+    !neighborhood ||
+    !beds ||
+    !property_type ||
+    !cancel_policy ||
+    !guests ||
+    !bedrooms ||
+    !bathrooms ||
+    !optimal_price
+  ) {
+    res.status(400).json({ message: 'All fields are required' });
+  }
+
+  const userProperty = new Object({ ...body, host_id: userID });
+
   try {
+    const userData = await Properties.addUserProperty(userProperty);
+
+    res.status(201).json({
+      message: 'Property was successfully added',
+      user_property: userData[0]
+    });
   } catch (err) {
     // catch errors
     console.log(err);
