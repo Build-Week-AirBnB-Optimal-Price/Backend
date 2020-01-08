@@ -151,7 +151,7 @@
  *
  *
  * @apiSuccessExample Successful response:
- *     HTTP/1.1 200 OK
+ *     HTTP/1.1 201 OK
  * {
  *   "message": "Property was successfully added",
  *   "user_property": {
@@ -224,7 +224,7 @@
  *
  *
  * @apiSuccessExample Successful response:
- *     HTTP/1.1 200 OK
+ *     HTTP/1.1 201 OK
  * {
  *   "message": "Property has been updated",
  *   "user_property": {

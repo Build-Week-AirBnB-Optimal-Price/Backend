@@ -635,7 +635,7 @@
       "examples": [
         {
           "title": "Successful response:",
-          "content": "    HTTP/1.1 200 OK\n{\n  \"message\": \"Property was successfully added\",\n  \"user_property\": {\n    \"id\": 21,\n    \"name\": \"TheHaven\",\n    \"host_since\": \"2001\",\n    \"zipcode\": \"10010\",\n    \"room_type\": \"Entirehome/apt\",\n    \"max_nights\": 10,\n    \"min_nights\": 3,\n    \"extra_people\": 2,\n    \"accomodates\": 6,\n    \"neighborhood\": \"Mitte\",\n    \"beds\": 5,\n    \"property_type\": \"Apartment\",\n    \"cancel_policy\": \"strict_14_with_grace_period\",\n    \"guests\": 4,\n    \"bedrooms\": 3,\n    \"bathrooms\": 2,\n    \"optimal_price\": 120\n  }\n}",
+          "content": "    HTTP/1.1 201 OK\n{\n  \"message\": \"Property was successfully added\",\n  \"user_property\": {\n    \"id\": 21,\n    \"name\": \"TheHaven\",\n    \"host_since\": \"2001\",\n    \"zipcode\": \"10010\",\n    \"room_type\": \"Entirehome/apt\",\n    \"max_nights\": 10,\n    \"min_nights\": 3,\n    \"extra_people\": 2,\n    \"accomodates\": 6,\n    \"neighborhood\": \"Mitte\",\n    \"beds\": 5,\n    \"property_type\": \"Apartment\",\n    \"cancel_policy\": \"strict_14_with_grace_period\",\n    \"guests\": 4,\n    \"bedrooms\": 3,\n    \"bathrooms\": 2,\n    \"optimal_price\": 120\n  }\n}",
           "type": "json"
         }
       ]
@@ -1273,7 +1273,7 @@
       "examples": [
         {
           "title": "Successful response:",
-          "content": "    HTTP/1.1 200 OK\n{\n  \"message\": \"Property has been updated\",\n  \"user_property\": {\n    \"id\": 20,\n    \"name\": \"TheHaven\",\n    \"host_since\": \"200121\",\n    \"zipcode\": \"10010\",\n    \"room_type\": \"Entirehome/apt\",\n    \"max_nights\": 10,\n    \"min_nights\": 3,\n    \"extra_people\": 2,\n    \"accomodates\": 6,\n    \"neighborhood\": \"Mitte\",\n    \"beds\": 5,\n    \"property_type\": \"Apartment\",\n    \"cancel_policy\": \"strict_14_with_grace_period\",\n    \"guests\": 4,\n    \"bedrooms\": 3,\n    \"bathrooms\": 2,\n    \"optimal_price\": 120\n  }\n}",
+          "content": "    HTTP/1.1 201 OK\n{\n  \"message\": \"Property has been updated\",\n  \"user_property\": {\n    \"id\": 20,\n    \"name\": \"TheHaven\",\n    \"host_since\": \"200121\",\n    \"zipcode\": \"10010\",\n    \"room_type\": \"Entirehome/apt\",\n    \"max_nights\": 10,\n    \"min_nights\": 3,\n    \"extra_people\": 2,\n    \"accomodates\": 6,\n    \"neighborhood\": \"Mitte\",\n    \"beds\": 5,\n    \"property_type\": \"Apartment\",\n    \"cancel_policy\": \"strict_14_with_grace_period\",\n    \"guests\": 4,\n    \"bedrooms\": 3,\n    \"bathrooms\": 2,\n    \"optimal_price\": 120\n  }\n}",
           "type": "json"
         }
       ]
