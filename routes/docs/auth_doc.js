@@ -4,6 +4,8 @@
  * @apiName Login
  * @apiGroup Authorization
  *
+ * @apiDescription Allows a user to log in with their credentials
+ *
  * @apiparam {String} username User's username
  * @apiparam {String} password User's password
  *
@@ -33,6 +35,8 @@
  * @apiVersion 1.0.0
  * @apiName Register
  * @apiGroup Authorization
+ *
+ * @apiDescription Allows a user to register for an account
  *
  * @apiparam {String} first_name User's firstname
  * @apiparam {String} last_name User's lastname

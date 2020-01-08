@@ -8,6 +8,11 @@
     "Register user",
     "Retrieve user info",
     "Update user info",
-    "Delete user info"
+    "Delete user info",
+    "Get all saved properties",
+    "Get specific saved property",
+    "Add new property",
+    "Update a property",
+    "Delete a property"
   ]
 }

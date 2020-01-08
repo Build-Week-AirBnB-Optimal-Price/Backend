@@ -14,9 +14,9 @@ const User = require('../models/User-model');
 // @ROUTE       GET /user/:id
 // @DESC        Gets user's information
 // @ACCESS      Private
-router.get('/:id', auth, verifyRoute, async (req, res) => {
+router.get('/:userID', auth, verifyRoute, async (req, res) => {
   // pull the id from the request parameters
-  const { id } = req.params;
+  const { userID: id } = req.params;
   try {
     // ping the database for the user with that id
     const user = await User.findUserBy({ id });
@@ -43,7 +43,7 @@ router.get('/:id', auth, verifyRoute, async (req, res) => {
 // @DESC        Updates a user's information
 // @ACCESS      Private
 router.put(
-  '/:id',
+  '/:userID',
   // auth verifies jwt
   auth,
   // verifyRoute verifies the user can access this route
@@ -52,7 +52,7 @@ router.put(
   checkInUse,
   async (req, res) => {
     // pull id from req.params
-    const { id } = req.params;
+    const { userID: id } = req.params;
     // pull body from request
     const { body } = req;
     // pull password from the body
@@ -97,8 +97,8 @@ router.put(
 // @ROUTE       Delete /user/:id
 // @DESC        Delete a user
 // @ACCESS      Private
-router.delete('/:id', auth, verifyRoute, async (req, res) => {
-  const { id } = req.params;
+router.delete('/:userID', auth, verifyRoute, async (req, res) => {
+  const { userID: id } = req.params;
   try {
     await User.removeUser(id);
 
