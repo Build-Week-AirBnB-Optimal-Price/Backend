@@ -28,6 +28,7 @@ exports.up = function(knex) {
     tbl.integer('guests').notNullable();
     tbl.integer('bedrooms').notNullable();
     tbl.integer('bathrooms').notNullable();
+    tbl.integer('optimal_price').notNullable();
   });
 };
 

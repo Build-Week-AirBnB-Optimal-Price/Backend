@@ -21,7 +21,8 @@ exports.seed = function(knex) {
           cancel_policy: 'moderate',
           guests: 3,
           bedrooms: 3,
-          bathrooms: 2
+          bathrooms: 2,
+          optimal_price: 200
         },
         {
           host_id: 1,
@@ -39,7 +40,8 @@ exports.seed = function(knex) {
           cancel_policy: 'super_strict_60',
           guests: 6,
           bedrooms: 5,
-          bathrooms: 4
+          bathrooms: 4,
+          optimal_price: 48
         },
         {
           host_id: 2,
@@ -57,7 +59,8 @@ exports.seed = function(knex) {
           cancel_policy: 'strict_14_with_grace_period',
           guests: 4,
           bedrooms: 3,
-          bathrooms: 2
+          bathrooms: 2,
+          optimal_price: 70
         },
         {
           host_id: 2,
@@ -75,7 +78,8 @@ exports.seed = function(knex) {
           cancel_policy: 'moderate',
           guests: 2,
           bedrooms: 4,
-          bathrooms: 3
+          bathrooms: 3,
+          optimal_price: 85
         },
         {
           host_id: 3,
@@ -93,7 +97,8 @@ exports.seed = function(knex) {
           cancel_policy: 'super_strict_30',
           guests: 3,
           bedrooms: 2,
-          bathrooms: 1
+          bathrooms: 1,
+          optimal_price: 123
         },
         {
           host_id: 3,
@@ -111,7 +116,8 @@ exports.seed = function(knex) {
           cancel_policy: 'strict_14_with_grace_period',
           guests: 5,
           bedrooms: 3,
-          bathrooms: 3
+          bathrooms: 3,
+          optimal_price: 231
         },
         {
           host_id: 4,
@@ -129,7 +135,8 @@ exports.seed = function(knex) {
           cancel_policy: 'moderate',
           guests: 5,
           bedrooms: 4,
-          bathrooms: 2
+          bathrooms: 2,
+          optimal_price: 89
         },
         {
           host_id: 4,
@@ -147,7 +154,8 @@ exports.seed = function(knex) {
           cancel_policy: 'super_strict_30',
           guests: 4,
           bedrooms: 4,
-          bathrooms: 3
+          bathrooms: 3,
+          optimal_price: 65
         },
         {
           host_id: 5,
@@ -165,7 +173,8 @@ exports.seed = function(knex) {
           cancel_policy: 'super_strict_60',
           guests: 3,
           bedrooms: 2,
-          bathrooms: 1
+          bathrooms: 1,
+          optimal_price: 100
         },
         {
           host_id: 5,
@@ -183,7 +192,8 @@ exports.seed = function(knex) {
           cancel_policy: 'strict_14_with_grace_period',
           guests: 4,
           bedrooms: 3,
-          bathrooms: 2
+          bathrooms: 2,
+          optimal_price: 120
         }
       ]);
     });
