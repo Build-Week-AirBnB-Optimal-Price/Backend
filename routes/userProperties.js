@@ -75,15 +75,15 @@ router.post('/:userID/properties/', auth, verifyRoute, async (req, res) => {
     host_since,
     zipcode,
     room_type,
-    max_nights,
-    min_nights,
+    maximum_nights,
+    minimum_nights,
     extra_people,
     accomodates,
-    neighborhood,
+    neighbourhood,
     beds,
     property_type,
-    cancel_policy,
-    guests,
+    cancellation_policy,
+    guests_included,
     bedrooms,
     bathrooms,
     optimal_price
@@ -95,15 +95,15 @@ router.post('/:userID/properties/', auth, verifyRoute, async (req, res) => {
     !host_since ||
     !zipcode ||
     !room_type ||
-    !max_nights ||
-    !min_nights ||
+    !maximum_nights ||
+    !minimum_nights ||
     !extra_people ||
     !accomodates ||
-    !neighborhood ||
+    !neighbourhood ||
     !beds ||
     !property_type ||
-    !cancel_policy ||
-    !guests ||
+    !cancellation_policy ||
+    !guests_included ||
     !bedrooms ||
     !bathrooms ||
     !optimal_price
