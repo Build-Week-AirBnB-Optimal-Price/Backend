@@ -13,19 +13,18 @@ exports.up = function(knex) {
       .onUpdate('CASCADE')
       .onDelete('CASCADE');
 
-    tbl.string('name', 255).notNullable();
     tbl.string('host_since', 255).notNullable();
     tbl.string('zipcode', 255).notNullable();
     tbl.string('room_type').notNullable();
-    tbl.integer('max_nights').notNullable();
-    tbl.integer('min_nights').notNullable();
+    tbl.integer('maximum_nights').notNullable();
+    tbl.integer('minimum_nights').notNullable();
     tbl.integer('extra_people').notNullable();
     tbl.integer('accomodates').notNullable();
-    tbl.string('neighborhood').notNullable();
+    tbl.string('neighbourhood').notNullable();
     tbl.integer('beds').notNullable();
     tbl.string('property_type', 255).notNullable();
-    tbl.string('cancel_policy', 255).notNullable();
-    tbl.integer('guests').notNullable();
+    tbl.string('cancellation_policy', 255).notNullable();
+    tbl.integer('guests_included').notNullable();
     tbl.integer('bedrooms').notNullable();
     tbl.integer('bathrooms').notNullable();
     tbl.integer('optimal_price').notNullable();
