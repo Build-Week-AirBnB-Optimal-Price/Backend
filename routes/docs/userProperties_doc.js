@@ -13,15 +13,15 @@
  * @apiSuccess {String} host_since User's original hosting date
  * @apiSuccess {String} zipcode Property zip code
  * @apiSuccess {String} room_type Property's room type
- * @apisuccess {Number} max_nights Property's max nights reserved
- * @apisuccess {Number} min_nights Property's min nights reserved
+ * @apisuccess {Number} maximum_nights Property's max nights reserved
+ * @apisuccess {Number} minimum_nights Property's min nights reserved
  * @apisuccess {Number} extra_people Extra people allowed
  * @apisuccess {Number} accomodates How many can this property accomodate
  * @apisuccess {String} neighborbood Location of property
  * @apisuccess {Number} beds How many beds the property has
  * @apisuccess {String} property_type Property type
- * @apisuccess {String} cancel_policy Cancellation policy
- * @apisuccess {Number} guests Amount of people normally
+ * @apisuccess {String} cancellation_policy Cancellation policy
+ * @apisuccess {Number} guests_included Amount of people normally
  * @apisuccess {Number} bedrooms How many bedroom this property has
  * @apisuccess {Number} optimal_pricing Optimal price for this property based on above params
  *
@@ -36,15 +36,15 @@
  *       "host_since": "2001",
  *       "zipcode": "10010",
  *       "room_type": "Entirehome/apt",
- *       "max_nights": 10,
- *       "min_nights": 3,
+ *       "maximum_nights": 10,
+ *       "minimum_nights": 3,
  *       "extra_people": 2,
  *       "accomodates": 6,
- *       "neighborhood": "Mitte",
+ *       "neighbourhood": "Mitte",
  *       "beds": 5,
  *       "property_type": "Apartment",
- *       "cancel_policy": "strict_14_with_grace_period",
- *       "guests": 4,
+ *       "cancellation_policy": "strict_14_with_grace_period",
+ *       "guests_included": 4,
  *       "bedrooms": 3,
  *       "bathrooms": 2,
  *       "optimal_price": 120
@@ -68,15 +68,15 @@
  * @apiSuccess {String} host_since User's original hosting date
  * @apiSuccess {String} zipcode Property zip code
  * @apiSuccess {String} room_type Property's room type
- * @apisuccess {Number} max_nights Property's max nights reserved
- * @apisuccess {Number} min_nights Property's min nights reserved
+ * @apisuccess {Number} maximum_nights Property's max nights reserved
+ * @apisuccess {Number} minimum_nights Property's min nights reserved
  * @apisuccess {Number} extra_people Extra people allowed
  * @apisuccess {Number} accomodates How many can this property accomodate
  * @apisuccess {String} neighborbood Location of property
  * @apisuccess {Number} beds How many beds the property has
  * @apisuccess {String} property_type Property type
- * @apisuccess {String} cancel_policy Cancellation policy
- * @apisuccess {Number} guests Amount of people normally
+ * @apisuccess {String} cancellation_policy Cancellation policy
+ * @apisuccess {Number} guests_included Amount of people normally
  * @apisuccess {Number} bedrooms How many bedroom this property has
  * @apisuccess {Number} optimal_pricing Optimal price for this property based on above params
  *
@@ -89,15 +89,15 @@
  *   "host_since": "2001",
  *   "zipcode": "10010",
  *   "room_type": "Entirehome/apt",
- *   "max_nights": 10,
- *   "min_nights": 3,
+ *   "maximum_nights": 10,
+ *   "minimum_nights": 3,
  *   "extra_people": 2,
  *   "accomodates": 6,
- *   "neighborhood": "Mitte",
+ *   "neighbourhood": "Mitte",
  *   "beds": 5,
  *   "property_type": "Apartment",
- *   "cancel_policy": "strict_14_with_grace_period",
- *   "guests": 4,
+ *   "cancellation_policy": "strict_14_with_grace_period",
+ *   "guests_included": 4,
  *   "bedrooms": 3,
  *   "bathrooms": 2,
  *   "optimal_price": 120
@@ -119,15 +119,15 @@
  * @apiparam {String} host_since User's original hosting date
  * @apiparam {String} zipcode Property zip code
  * @apiparam {String} room_type Property's room type
- * @apiparam {Number} max_nights Property's max nights reserved
- * @apiparam {Number} min_nights Property's min nights reserved
+ * @apiparam {Number} maximum_nights Property's max nights reserved
+ * @apiparam {Number} minimum_nights Property's min nights reserved
  * @apiparam {Number} extra_people Extra people allowed
  * @apiparam {Number} accomodates How many can this property accomodate
  * @apiparam {String} neighborbood Location of property
  * @apiparam {Number} beds How many beds the property has
  * @apiparam {String} property_type Property type
- * @apiparam {String} cancel_policy Cancellation policy
- * @apiparam {Number} guests Amount of people normally
+ * @apiparam {String} cancellation_policy Cancellation policy
+ * @apiparam {Number} guests_included Amount of people normally
  * @apiparam {Number} bedrooms How many bedroom this property has
  * @apiparam {Number} optimal_pricing Optimal price for this property based on above params
  *
@@ -137,15 +137,15 @@
  * @apiSuccess {String} host_since User's original hosting date
  * @apiSuccess {String} zipcode Property zip code
  * @apiSuccess {String} room_type Property's room type
- * @apisuccess {Number} max_nights Property's max nights reserved
- * @apisuccess {Number} min_nights Property's min nights reserved
+ * @apisuccess {Number} maximum_nights Property's max nights reserved
+ * @apisuccess {Number} minimum_nights Property's min nights reserved
  * @apisuccess {Number} extra_people Extra people allowed
  * @apisuccess {Number} accomodates How many can this property accomodate
  * @apisuccess {String} neighborbood Location of property
  * @apisuccess {Number} beds How many beds the property has
  * @apisuccess {String} property_type Property type
- * @apisuccess {String} cancel_policy Cancellation policy
- * @apisuccess {Number} guests Amount of people normally
+ * @apisuccess {String} cancellation_policy Cancellation policy
+ * @apisuccess {Number} guests_included Amount of people normally
  * @apisuccess {Number} bedrooms How many bedroom this property has
  * @apisuccess {Number} optimal_pricing Optimal price for this property based on above params
  *
@@ -160,15 +160,15 @@
  *     "host_since": "2001",
  *     "zipcode": "10010",
  *     "room_type": "Entirehome/apt",
- *     "max_nights": 10,
- *     "min_nights": 3,
+ *     "maximum_nights": 10,
+ *     "minimum_nights": 3,
  *     "extra_people": 2,
  *     "accomodates": 6,
- *     "neighborhood": "Mitte",
+ *     "neighbourhood": "Mitte",
  *     "beds": 5,
  *     "property_type": "Apartment",
- *     "cancel_policy": "strict_14_with_grace_period",
- *     "guests": 4,
+ *     "cancellation_policy": "strict_14_with_grace_period",
+ *     "guests_included": 4,
  *     "bedrooms": 3,
  *     "bathrooms": 2,
  *     "optimal_price": 120
@@ -192,15 +192,15 @@
  * @apiparam {String} host_since User's original hosting date
  * @apiparam {String} zipcode Property zip code
  * @apiparam {String} room_type Property's room type
- * @apiparam {Number} max_nights Property's max nights reserved
- * @apiparam {Number} min_nights Property's min nights reserved
+ * @apiparam {Number} maximum_nights Property's max nights reserved
+ * @apiparam {Number} minimum_nights Property's min nights reserved
  * @apiparam {Number} extra_people Extra people allowed
  * @apiparam {Number} accomodates How many can this property accomodate
  * @apiparam {String} neighborbood Location of property
  * @apiparam {Number} beds How many beds the property has
  * @apiparam {String} property_type Property type
- * @apiparam {String} cancel_policy Cancellation policy
- * @apiparam {Number} guests Amount of people normally
+ * @apiparam {String} cancellation_policy Cancellation policy
+ * @apiparam {Number} guests_included Amount of people normally
  * @apiparam {Number} bedrooms How many bedroom this property has
  * @apiparam {Number} optimal_pricing Optimal price for this property based on above params
  *
@@ -210,15 +210,15 @@
  * @apiSuccess {String} host_since User's original hosting date
  * @apiSuccess {String} zipcode Property zip code
  * @apiSuccess {String} room_type Property's room type
- * @apisuccess {Number} max_nights Property's max nights reserved
- * @apisuccess {Number} min_nights Property's min nights reserved
+ * @apisuccess {Number} maximum_nights Property's max nights reserved
+ * @apisuccess {Number} minimum_nights Property's min nights reserved
  * @apisuccess {Number} extra_people Extra people allowed
  * @apisuccess {Number} accomodates How many can this property accomodate
  * @apisuccess {String} neighborbood Location of property
  * @apisuccess {Number} beds How many beds the property has
  * @apisuccess {String} property_type Property type
- * @apisuccess {String} cancel_policy Cancellation policy
- * @apisuccess {Number} guests Amount of people normally
+ * @apisuccess {String} cancellation_policy Cancellation policy
+ * @apisuccess {Number} guests_included Amount of people normally
  * @apisuccess {Number} bedrooms How many bedroom this property has
  * @apisuccess {Number} optimal_pricing Optimal price for this property based on above params
  *
@@ -233,15 +233,15 @@
  *     "host_since": "200121",
  *     "zipcode": "10010",
  *     "room_type": "Entirehome/apt",
- *     "max_nights": 10,
- *     "min_nights": 3,
+ *     "maximum_nights": 10,
+ *     "minimum_nights": 3,
  *     "extra_people": 2,
  *     "accomodates": 6,
- *     "neighborhood": "Mitte",
+ *     "neighbourhood": "Mitte",
  *     "beds": 5,
  *     "property_type": "Apartment",
- *     "cancel_policy": "strict_14_with_grace_period",
- *     "guests": 4,
+ *     "cancellation_policy": "strict_14_with_grace_period",
+ *     "guests_included": 4,
  *     "bedrooms": 3,
  *     "bathrooms": 2,
  *     "optimal_price": 120
@@ -261,7 +261,7 @@
  * @apiparam {Number} propID Property ID that belongs to the user
  *
  * @apiSuccess {String} message Success message
- * 
+ *
  * @apiSuccessExample Successful response:
  *     HTTP/1.1 200 OK
  * {

@@ -432,14 +432,14 @@
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": "max_nights",
+            "field": "maximum_nights",
             "description": "<p>Property's max nights reserved</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": "min_nights",
+            "field": "minimum_nights",
             "description": "<p>Property's min nights reserved</p>"
           },
           {
@@ -481,14 +481,14 @@
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "cancel_policy",
+            "field": "cancellation_policy",
             "description": "<p>Cancellation policy</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": "guests",
+            "field": "guests_included",
             "description": "<p>Amount of people normally</p>"
           },
           {
@@ -557,14 +557,14 @@
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "max_nights",
+            "field": "maximum_nights",
             "description": "<p>Property's max nights reserved</p>"
           },
           {
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "min_nights",
+            "field": "minimum_nights",
             "description": "<p>Property's min nights reserved</p>"
           },
           {
@@ -606,14 +606,14 @@
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "cancel_policy",
+            "field": "cancellation_policy",
             "description": "<p>Cancellation policy</p>"
           },
           {
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "guests",
+            "field": "guests_included",
             "description": "<p>Amount of people normally</p>"
           },
           {
@@ -635,7 +635,7 @@
       "examples": [
         {
           "title": "Successful response:",
-          "content": "    HTTP/1.1 201 OK\n{\n  \"message\": \"Property was successfully added\",\n  \"user_property\": {\n    \"id\": 21,\n    \"name\": \"TheHaven\",\n    \"host_since\": \"2001\",\n    \"zipcode\": \"10010\",\n    \"room_type\": \"Entirehome/apt\",\n    \"max_nights\": 10,\n    \"min_nights\": 3,\n    \"extra_people\": 2,\n    \"accomodates\": 6,\n    \"neighborhood\": \"Mitte\",\n    \"beds\": 5,\n    \"property_type\": \"Apartment\",\n    \"cancel_policy\": \"strict_14_with_grace_period\",\n    \"guests\": 4,\n    \"bedrooms\": 3,\n    \"bathrooms\": 2,\n    \"optimal_price\": 120\n  }\n}",
+          "content": "    HTTP/1.1 201 OK\n{\n  \"message\": \"Property was successfully added\",\n  \"user_property\": {\n    \"id\": 21,\n    \"name\": \"TheHaven\",\n    \"host_since\": \"2001\",\n    \"zipcode\": \"10010\",\n    \"room_type\": \"Entirehome/apt\",\n    \"maximum_nights\": 10,\n    \"minimum_nights\": 3,\n    \"extra_people\": 2,\n    \"accomodates\": 6,\n    \"neighbourhood\": \"Mitte\",\n    \"beds\": 5,\n    \"property_type\": \"Apartment\",\n    \"cancellation_policy\": \"strict_14_with_grace_period\",\n    \"guests_included\": 4,\n    \"bedrooms\": 3,\n    \"bathrooms\": 2,\n    \"optimal_price\": 120\n  }\n}",
           "type": "json"
         }
       ]
@@ -764,14 +764,14 @@
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "max_nights",
+            "field": "maximum_nights",
             "description": "<p>Property's max nights reserved</p>"
           },
           {
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "min_nights",
+            "field": "minimum_nights",
             "description": "<p>Property's min nights reserved</p>"
           },
           {
@@ -813,14 +813,14 @@
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "cancel_policy",
+            "field": "cancellation_policy",
             "description": "<p>Cancellation policy</p>"
           },
           {
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "guests",
+            "field": "guests_included",
             "description": "<p>Amount of people normally</p>"
           },
           {
@@ -842,7 +842,7 @@
       "examples": [
         {
           "title": "Successful response:",
-          "content": "    HTTP/1.1 200 OK\n{\n  \"id\": 15,\n  \"name\": \"TheHaven\",\n  \"host_since\": \"2001\",\n  \"zipcode\": \"10010\",\n  \"room_type\": \"Entirehome/apt\",\n  \"max_nights\": 10,\n  \"min_nights\": 3,\n  \"extra_people\": 2,\n  \"accomodates\": 6,\n  \"neighborhood\": \"Mitte\",\n  \"beds\": 5,\n  \"property_type\": \"Apartment\",\n  \"cancel_policy\": \"strict_14_with_grace_period\",\n  \"guests\": 4,\n  \"bedrooms\": 3,\n  \"bathrooms\": 2,\n  \"optimal_price\": 120\n}",
+          "content": "    HTTP/1.1 200 OK\n{\n  \"id\": 15,\n  \"name\": \"TheHaven\",\n  \"host_since\": \"2001\",\n  \"zipcode\": \"10010\",\n  \"room_type\": \"Entirehome/apt\",\n  \"maximum_nights\": 10,\n  \"minimum_nights\": 3,\n  \"extra_people\": 2,\n  \"accomodates\": 6,\n  \"neighbourhood\": \"Mitte\",\n  \"beds\": 5,\n  \"property_type\": \"Apartment\",\n  \"cancellation_policy\": \"strict_14_with_grace_period\",\n  \"guests_included\": 4,\n  \"bedrooms\": 3,\n  \"bathrooms\": 2,\n  \"optimal_price\": 120\n}",
           "type": "json"
         }
       ]
@@ -913,14 +913,14 @@
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "max_nights",
+            "field": "maximum_nights",
             "description": "<p>Property's max nights reserved</p>"
           },
           {
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "min_nights",
+            "field": "minimum_nights",
             "description": "<p>Property's min nights reserved</p>"
           },
           {
@@ -962,14 +962,14 @@
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "cancel_policy",
+            "field": "cancellation_policy",
             "description": "<p>Cancellation policy</p>"
           },
           {
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "guests",
+            "field": "guests_included",
             "description": "<p>Amount of people normally</p>"
           },
           {
@@ -991,7 +991,7 @@
       "examples": [
         {
           "title": "Successful response:",
-          "content": "    HTTP/1.1 200 OK\n{\n  \"user_properties\": [\n    {\n      \"id\": 15,\n      \"name\": \"TheHaven\",\n      \"host_since\": \"2001\",\n      \"zipcode\": \"10010\",\n      \"room_type\": \"Entirehome/apt\",\n      \"max_nights\": 10,\n      \"min_nights\": 3,\n      \"extra_people\": 2,\n      \"accomodates\": 6,\n      \"neighborhood\": \"Mitte\",\n      \"beds\": 5,\n      \"property_type\": \"Apartment\",\n      \"cancel_policy\": \"strict_14_with_grace_period\",\n      \"guests\": 4,\n      \"bedrooms\": 3,\n      \"bathrooms\": 2,\n      \"optimal_price\": 120\n    }\n}",
+          "content": "    HTTP/1.1 200 OK\n{\n  \"user_properties\": [\n    {\n      \"id\": 15,\n      \"name\": \"TheHaven\",\n      \"host_since\": \"2001\",\n      \"zipcode\": \"10010\",\n      \"room_type\": \"Entirehome/apt\",\n      \"maximum_nights\": 10,\n      \"minimum_nights\": 3,\n      \"extra_people\": 2,\n      \"accomodates\": 6,\n      \"neighbourhood\": \"Mitte\",\n      \"beds\": 5,\n      \"property_type\": \"Apartment\",\n      \"cancellation_policy\": \"strict_14_with_grace_period\",\n      \"guests_included\": 4,\n      \"bedrooms\": 3,\n      \"bathrooms\": 2,\n      \"optimal_price\": 120\n    }\n}",
           "type": "json"
         }
       ]
@@ -1070,14 +1070,14 @@
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": "max_nights",
+            "field": "maximum_nights",
             "description": "<p>Property's max nights reserved</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": "min_nights",
+            "field": "minimum_nights",
             "description": "<p>Property's min nights reserved</p>"
           },
           {
@@ -1119,14 +1119,14 @@
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "cancel_policy",
+            "field": "cancellation_policy",
             "description": "<p>Cancellation policy</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": "guests",
+            "field": "guests_included",
             "description": "<p>Amount of people normally</p>"
           },
           {
@@ -1195,14 +1195,14 @@
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "max_nights",
+            "field": "maximum_nights",
             "description": "<p>Property's max nights reserved</p>"
           },
           {
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "min_nights",
+            "field": "minimum_nights",
             "description": "<p>Property's min nights reserved</p>"
           },
           {
@@ -1244,14 +1244,14 @@
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "cancel_policy",
+            "field": "cancellation_policy",
             "description": "<p>Cancellation policy</p>"
           },
           {
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "guests",
+            "field": "guests_included",
             "description": "<p>Amount of people normally</p>"
           },
           {
@@ -1273,7 +1273,7 @@
       "examples": [
         {
           "title": "Successful response:",
-          "content": "    HTTP/1.1 201 OK\n{\n  \"message\": \"Property has been updated\",\n  \"user_property\": {\n    \"id\": 20,\n    \"name\": \"TheHaven\",\n    \"host_since\": \"200121\",\n    \"zipcode\": \"10010\",\n    \"room_type\": \"Entirehome/apt\",\n    \"max_nights\": 10,\n    \"min_nights\": 3,\n    \"extra_people\": 2,\n    \"accomodates\": 6,\n    \"neighborhood\": \"Mitte\",\n    \"beds\": 5,\n    \"property_type\": \"Apartment\",\n    \"cancel_policy\": \"strict_14_with_grace_period\",\n    \"guests\": 4,\n    \"bedrooms\": 3,\n    \"bathrooms\": 2,\n    \"optimal_price\": 120\n  }\n}",
+          "content": "    HTTP/1.1 201 OK\n{\n  \"message\": \"Property has been updated\",\n  \"user_property\": {\n    \"id\": 20,\n    \"name\": \"TheHaven\",\n    \"host_since\": \"200121\",\n    \"zipcode\": \"10010\",\n    \"room_type\": \"Entirehome/apt\",\n    \"maximum_nights\": 10,\n    \"minimum_nights\": 3,\n    \"extra_people\": 2,\n    \"accomodates\": 6,\n    \"neighbourhood\": \"Mitte\",\n    \"beds\": 5,\n    \"property_type\": \"Apartment\",\n    \"cancellation_policy\": \"strict_14_with_grace_period\",\n    \"guests_included\": 4,\n    \"bedrooms\": 3,\n    \"bathrooms\": 2,\n    \"optimal_price\": 120\n  }\n}",
           "type": "json"
         }
       ]

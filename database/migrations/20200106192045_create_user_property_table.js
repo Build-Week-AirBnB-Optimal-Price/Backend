@@ -13,6 +13,7 @@ exports.up = function(knex) {
       .onUpdate('CASCADE')
       .onDelete('CASCADE');
 
+    tbl.string('name', 255).notNullable();
     tbl.string('host_since', 255).notNullable();
     tbl.string('zipcode', 255).notNullable();
     tbl.string('room_type').notNullable();

@@ -7,6 +7,7 @@ exports.seed = function(knex) {
       return knex('user_airbnb').insert([
         {
           host_id: 1,
+          name: 'Corner Cottage',
           host_since: new Date(),
           zipcode: '10001',
           room_type: 'Entire home/apt',
@@ -25,6 +26,7 @@ exports.seed = function(knex) {
         },
         {
           host_id: 1,
+          name: 'The Villa',
           host_since: new Date(),
           zipcode: '10002',
           room_type: 'Shared room',
@@ -43,6 +45,7 @@ exports.seed = function(knex) {
         },
         {
           host_id: 2,
+          name: 'Ivy Cottage',
           host_since: new Date(),
           zipcode: '10003',
           room_type: 'Entire home/apt',
@@ -61,6 +64,7 @@ exports.seed = function(knex) {
         },
         {
           host_id: 2,
+          name: 'Mill House',
           host_since: new Date(),
           zipcode: '10004',
           room_type: 'Private room',
@@ -79,6 +83,7 @@ exports.seed = function(knex) {
         },
         {
           host_id: 3,
+          name: 'Orchard Cottage',
           host_since: new Date(),
           zipcode: '10005',
           room_type: 'Shared room',
@@ -97,6 +102,7 @@ exports.seed = function(knex) {
         },
         {
           host_id: 3,
+          name: 'School House',
           host_since: new Date(),
           zipcode: '10006',
           room_type: 'Entire home/apt',
@@ -115,6 +121,7 @@ exports.seed = function(knex) {
         },
         {
           host_id: 4,
+          name: 'The Barn',
           host_since: new Date(),
           zipcode: '10007',
           room_type: 'Private room',
@@ -133,6 +140,7 @@ exports.seed = function(knex) {
         },
         {
           host_id: 4,
+          name: 'The Bungalow',
           host_since: new Date(),
           zipcode: '10008',
           room_type: 'Entire home/apt',
@@ -151,6 +159,7 @@ exports.seed = function(knex) {
         },
         {
           host_id: 5,
+          name: 'Mill House',
           host_since: new Date(),
           zipcode: '10009',
           room_type: 'Private room',
@@ -169,6 +178,7 @@ exports.seed = function(knex) {
         },
         {
           host_id: 5,
+          name: 'The Haven',
           host_since: new Date(),
           zipcode: '10010',
           room_type: 'Entire home/apt',
