@@ -20,7 +20,7 @@ exports.up = function(knex) {
     tbl.integer('maximum_nights').notNullable();
     tbl.integer('minimum_nights').notNullable();
     tbl.integer('extra_people').notNullable();
-    tbl.integer('accomodates').notNullable();
+    tbl.integer('accommodates').notNullable();
     tbl.string('neighbourhood').notNullable();
     tbl.integer('beds').notNullable();
     tbl.string('property_type', 255).notNullable();
