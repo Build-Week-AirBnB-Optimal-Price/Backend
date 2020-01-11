@@ -8,5 +8,6 @@ require('./configure-middleware')(server);
 server.use('/', require('../routes/auth'));
 server.use('/user', require('../routes/userData'));
 server.use('/user', require('../routes/userProperties'));
+server.use('/optimalprice', require('../routes/optimalPrice'));
 
 module.exports = server;
