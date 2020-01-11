@@ -5,7 +5,6 @@ router.post('/', async (req, res) => {
   // pull body from req
   const { body } = req;
   // pull all necessary parameters from body
-  console.log(body);
   const {
     host_since,
     zipcode,
