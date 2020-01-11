@@ -45,7 +45,7 @@ router.post('/', async (req, res) => {
   try {
     // await axios call to DS backend
     const response = await axios.post(
-      'https://hidden-waters-19421.herokuapp.com/',
+      'https://airbnb-model.herokuapp.com',
       body
     );
     // if successfull, respond with results
