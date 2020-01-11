@@ -78,7 +78,7 @@ router.post('/:userID/properties/', auth, verifyRoute, async (req, res) => {
     maximum_nights,
     minimum_nights,
     extra_people,
-    accomodates,
+    accommodates,
     neighbourhood,
     beds,
     property_type,
@@ -98,7 +98,7 @@ router.post('/:userID/properties/', auth, verifyRoute, async (req, res) => {
     !maximum_nights ||
     !minimum_nights ||
     !extra_people ||
-    !accomodates ||
+    !accommodates ||
     !neighbourhood ||
     !beds ||
     !property_type ||

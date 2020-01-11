@@ -13,6 +13,7 @@
     "Get specific saved property",
     "Add new property",
     "Update a property",
-    "Delete a property"
+    "Delete a property",
+    "Get optimal price"
   ]
 }

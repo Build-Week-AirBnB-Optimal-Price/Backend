@@ -165,6 +165,134 @@ define({ "api": [
     "groupTitle": "Authorization"
   },
   {
+    "type": "post",
+    "url": "/optimalprice",
+    "title": "Get optimal price",
+    "version": "1.0.0",
+    "name": "Returns_an_optimal_price_for_a_property",
+    "group": "Pricing_API",
+    "description": "<p>This route allows a user to ping the DS server and get an optimal price for their property</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "host_since",
+            "description": "<p>User's original hosting date</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "zipcode",
+            "description": "<p>Property zip code</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "room_type",
+            "description": "<p>Property's room type</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "maximum_nights",
+            "description": "<p>Property's max nights reserved</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "minimum_nights",
+            "description": "<p>Property's min nights reserved</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "extra_people",
+            "description": "<p>Extra people allowed</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "accommodates",
+            "description": "<p>How many can this property accomodate</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "neighborbood",
+            "description": "<p>Location of property</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "beds",
+            "description": "<p>How many beds the property has</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "property_type",
+            "description": "<p>Property type</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "cancellation_policy",
+            "description": "<p>Cancellation policy</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "guests_included",
+            "description": "<p>Amount of people normally</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "bedrooms",
+            "description": "<p>How many bedroom this property has</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "results",
+            "description": "<p>Resulting price</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Successful response:",
+          "content": "   HTTP/1.1 200 OK\n{\n \"results\": 16\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/docs/optimalPrice_doc.js",
+    "groupTitle": "Pricing_API"
+  },
+  {
     "type": "delete",
     "url": "/user/:id",
     "title": "Delete user info",
@@ -390,20 +518,6 @@ define({ "api": [
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "message",
-            "description": "<p>Success message</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "id",
-            "description": "<p>User property id</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
             "field": "name",
             "description": "<p>Property name</p>"
           },
@@ -453,7 +567,7 @@ define({ "api": [
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": "accomodates",
+            "field": "accommodates",
             "description": "<p>How many can this property accomodate</p>"
           },
           {
@@ -578,7 +692,7 @@ define({ "api": [
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "accomodates",
+            "field": "accommodates",
             "description": "<p>How many can this property accomodate</p>"
           },
           {
@@ -635,7 +749,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Successful response:",
-          "content": "    HTTP/1.1 201 OK\n{\n  \"message\": \"Property was successfully added\",\n  \"user_property\": {\n    \"id\": 21,\n    \"name\": \"TheHaven\",\n    \"host_since\": \"2001\",\n    \"zipcode\": \"10010\",\n    \"room_type\": \"Entirehome/apt\",\n    \"maximum_nights\": 10,\n    \"minimum_nights\": 3,\n    \"extra_people\": 2,\n    \"accomodates\": 6,\n    \"neighbourhood\": \"Mitte\",\n    \"beds\": 5,\n    \"property_type\": \"Apartment\",\n    \"cancellation_policy\": \"strict_14_with_grace_period\",\n    \"guests_included\": 4,\n    \"bedrooms\": 3,\n    \"bathrooms\": 2,\n    \"optimal_price\": 120\n  }\n}",
+          "content": "    HTTP/1.1 201 OK\n{\n  \"message\": \"Property was successfully added\",\n  \"user_property\": {\n    \"id\": 21,\n    \"name\": \"TheHaven\",\n    \"host_since\": \"2001\",\n    \"zipcode\": \"10010\",\n    \"room_type\": \"Entirehome/apt\",\n    \"maximum_nights\": 10,\n    \"minimum_nights\": 3,\n    \"extra_people\": 2,\n    \"accommodates\": 6,\n    \"neighbourhood\": \"Mitte\",\n    \"beds\": 5,\n    \"property_type\": \"Apartment\",\n    \"cancellation_policy\": \"strict_14_with_grace_period\",\n    \"guests_included\": 4,\n    \"bedrooms\": 3,\n    \"bathrooms\": 2,\n    \"optimal_price\": 120\n  }\n}",
           "type": "json"
         }
       ]
@@ -785,7 +899,7 @@ define({ "api": [
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "accomodates",
+            "field": "accommodates",
             "description": "<p>How many can this property accomodate</p>"
           },
           {
@@ -842,7 +956,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Successful response:",
-          "content": "    HTTP/1.1 200 OK\n{\n  \"id\": 15,\n  \"name\": \"TheHaven\",\n  \"host_since\": \"2001\",\n  \"zipcode\": \"10010\",\n  \"room_type\": \"Entirehome/apt\",\n  \"maximum_nights\": 10,\n  \"minimum_nights\": 3,\n  \"extra_people\": 2,\n  \"accomodates\": 6,\n  \"neighbourhood\": \"Mitte\",\n  \"beds\": 5,\n  \"property_type\": \"Apartment\",\n  \"cancellation_policy\": \"strict_14_with_grace_period\",\n  \"guests_included\": 4,\n  \"bedrooms\": 3,\n  \"bathrooms\": 2,\n  \"optimal_price\": 120\n}",
+          "content": "    HTTP/1.1 200 OK\n{\n  \"id\": 15,\n  \"name\": \"TheHaven\",\n  \"host_since\": \"2001\",\n  \"zipcode\": \"10010\",\n  \"room_type\": \"Entirehome/apt\",\n  \"maximum_nights\": 10,\n  \"minimum_nights\": 3,\n  \"extra_people\": 2,\n  \"accommodates\": 6,\n  \"neighbourhood\": \"Mitte\",\n  \"beds\": 5,\n  \"property_type\": \"Apartment\",\n  \"cancellation_policy\": \"strict_14_with_grace_period\",\n  \"guests_included\": 4,\n  \"bedrooms\": 3,\n  \"bathrooms\": 2,\n  \"optimal_price\": 120\n}",
           "type": "json"
         }
       ]
@@ -934,7 +1048,7 @@ define({ "api": [
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "accomodates",
+            "field": "accommodates",
             "description": "<p>How many can this property accomodate</p>"
           },
           {
@@ -991,7 +1105,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Successful response:",
-          "content": "    HTTP/1.1 200 OK\n{\n  \"user_properties\": [\n    {\n      \"id\": 15,\n      \"name\": \"TheHaven\",\n      \"host_since\": \"2001\",\n      \"zipcode\": \"10010\",\n      \"room_type\": \"Entirehome/apt\",\n      \"maximum_nights\": 10,\n      \"minimum_nights\": 3,\n      \"extra_people\": 2,\n      \"accomodates\": 6,\n      \"neighbourhood\": \"Mitte\",\n      \"beds\": 5,\n      \"property_type\": \"Apartment\",\n      \"cancellation_policy\": \"strict_14_with_grace_period\",\n      \"guests_included\": 4,\n      \"bedrooms\": 3,\n      \"bathrooms\": 2,\n      \"optimal_price\": 120\n    }\n}",
+          "content": "    HTTP/1.1 200 OK\n{\n  \"user_properties\": [\n    {\n      \"id\": 15,\n      \"name\": \"TheHaven\",\n      \"host_since\": \"2001\",\n      \"zipcode\": \"10010\",\n      \"room_type\": \"Entirehome/apt\",\n      \"maximum_nights\": 10,\n      \"minimum_nights\": 3,\n      \"extra_people\": 2,\n      \"accommodates\": 6,\n      \"neighbourhood\": \"Mitte\",\n      \"beds\": 5,\n      \"property_type\": \"Apartment\",\n      \"cancellation_policy\": \"strict_14_with_grace_period\",\n      \"guests_included\": 4,\n      \"bedrooms\": 3,\n      \"bathrooms\": 2,\n      \"optimal_price\": 120\n    }\n}",
           "type": "json"
         }
       ]
@@ -1023,20 +1137,6 @@ define({ "api": [
             "optional": false,
             "field": "propID",
             "description": "<p>Property ID that belongs to the user</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "message",
-            "description": "<p>Success message</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "id",
-            "description": "<p>User property id</p>"
           },
           {
             "group": "Parameter",
@@ -1091,7 +1191,7 @@ define({ "api": [
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": "accomodates",
+            "field": "accommodates",
             "description": "<p>How many can this property accomodate</p>"
           },
           {
@@ -1216,7 +1316,7 @@ define({ "api": [
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "accomodates",
+            "field": "accommodates",
             "description": "<p>How many can this property accomodate</p>"
           },
           {
@@ -1273,7 +1373,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Successful response:",
-          "content": "    HTTP/1.1 201 OK\n{\n  \"message\": \"Property has been updated\",\n  \"user_property\": {\n    \"id\": 20,\n    \"name\": \"TheHaven\",\n    \"host_since\": \"200121\",\n    \"zipcode\": \"10010\",\n    \"room_type\": \"Entirehome/apt\",\n    \"maximum_nights\": 10,\n    \"minimum_nights\": 3,\n    \"extra_people\": 2,\n    \"accomodates\": 6,\n    \"neighbourhood\": \"Mitte\",\n    \"beds\": 5,\n    \"property_type\": \"Apartment\",\n    \"cancellation_policy\": \"strict_14_with_grace_period\",\n    \"guests_included\": 4,\n    \"bedrooms\": 3,\n    \"bathrooms\": 2,\n    \"optimal_price\": 120\n  }\n}",
+          "content": "    HTTP/1.1 201 OK\n{\n  \"message\": \"Property has been updated\",\n  \"user_property\": {\n    \"id\": 20,\n    \"name\": \"TheHaven\",\n    \"host_since\": \"200121\",\n    \"zipcode\": \"10010\",\n    \"room_type\": \"Entirehome/apt\",\n    \"maximum_nights\": 10,\n    \"minimum_nights\": 3,\n    \"extra_people\": 2,\n    \"accommodates\": 6,\n    \"neighbourhood\": \"Mitte\",\n    \"beds\": 5,\n    \"property_type\": \"Apartment\",\n    \"cancellation_policy\": \"strict_14_with_grace_period\",\n    \"guests_included\": 4,\n    \"bedrooms\": 3,\n    \"bathrooms\": 2,\n    \"optimal_price\": 120\n  }\n}",
           "type": "json"
         }
       ]

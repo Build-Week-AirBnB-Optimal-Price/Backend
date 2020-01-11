@@ -13,14 +13,15 @@ define({
     "Get specific saved property",
     "Add new property",
     "Update a property",
-    "Delete a property"
+    "Delete a property",
+    "Get optimal price"
   ],
   "sampleUrl": false,
   "defaultVersion": "0.0.0",
   "apidoc": "0.3.0",
   "generator": {
     "name": "apidoc",
-    "time": "2020-01-10T05:42:36.423Z",
+    "time": "2020-01-11T03:02:52.971Z",
     "url": "http://apidocjs.com",
     "version": "0.19.0"
   }

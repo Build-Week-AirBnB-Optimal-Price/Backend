@@ -16,7 +16,7 @@
  * @apisuccess {Number} maximum_nights Property's max nights reserved
  * @apisuccess {Number} minimum_nights Property's min nights reserved
  * @apisuccess {Number} extra_people Extra people allowed
- * @apisuccess {Number} accomodates How many can this property accomodate
+ * @apisuccess {Number} accommodates How many can this property accomodate
  * @apisuccess {String} neighborbood Location of property
  * @apisuccess {Number} beds How many beds the property has
  * @apisuccess {String} property_type Property type
@@ -39,7 +39,7 @@
  *       "maximum_nights": 10,
  *       "minimum_nights": 3,
  *       "extra_people": 2,
- *       "accomodates": 6,
+ *       "accommodates": 6,
  *       "neighbourhood": "Mitte",
  *       "beds": 5,
  *       "property_type": "Apartment",
@@ -71,7 +71,7 @@
  * @apisuccess {Number} maximum_nights Property's max nights reserved
  * @apisuccess {Number} minimum_nights Property's min nights reserved
  * @apisuccess {Number} extra_people Extra people allowed
- * @apisuccess {Number} accomodates How many can this property accomodate
+ * @apisuccess {Number} accommodates How many can this property accomodate
  * @apisuccess {String} neighborbood Location of property
  * @apisuccess {Number} beds How many beds the property has
  * @apisuccess {String} property_type Property type
@@ -92,7 +92,7 @@
  *   "maximum_nights": 10,
  *   "minimum_nights": 3,
  *   "extra_people": 2,
- *   "accomodates": 6,
+ *   "accommodates": 6,
  *   "neighbourhood": "Mitte",
  *   "beds": 5,
  *   "property_type": "Apartment",
@@ -113,8 +113,6 @@
  * @apiDescription This route allows a user to save a property to their account
  *
  * @apiparam {Number} userID User's account id
- * @apiparam {String} message Success message
- * @apiparam {Number} id User property id
  * @apiparam {String} name Property name
  * @apiparam {String} host_since User's original hosting date
  * @apiparam {String} zipcode Property zip code
@@ -122,7 +120,7 @@
  * @apiparam {Number} maximum_nights Property's max nights reserved
  * @apiparam {Number} minimum_nights Property's min nights reserved
  * @apiparam {Number} extra_people Extra people allowed
- * @apiparam {Number} accomodates How many can this property accomodate
+ * @apiparam {Number} accommodates How many can this property accomodate
  * @apiparam {String} neighborbood Location of property
  * @apiparam {Number} beds How many beds the property has
  * @apiparam {String} property_type Property type
@@ -140,7 +138,7 @@
  * @apisuccess {Number} maximum_nights Property's max nights reserved
  * @apisuccess {Number} minimum_nights Property's min nights reserved
  * @apisuccess {Number} extra_people Extra people allowed
- * @apisuccess {Number} accomodates How many can this property accomodate
+ * @apisuccess {Number} accommodates How many can this property accomodate
  * @apisuccess {String} neighborbood Location of property
  * @apisuccess {Number} beds How many beds the property has
  * @apisuccess {String} property_type Property type
@@ -163,7 +161,7 @@
  *     "maximum_nights": 10,
  *     "minimum_nights": 3,
  *     "extra_people": 2,
- *     "accomodates": 6,
+ *     "accommodates": 6,
  *     "neighbourhood": "Mitte",
  *     "beds": 5,
  *     "property_type": "Apartment",
@@ -186,8 +184,6 @@
  *
  * @apiparam {Number} userID User's account id
  * @apiparam {Number} propID Property ID that belongs to the user
- * @apiparam {String} message Success message
- * @apiparam {Number} id User property id
  * @apiparam {String} name Property name
  * @apiparam {String} host_since User's original hosting date
  * @apiparam {String} zipcode Property zip code
@@ -195,7 +191,7 @@
  * @apiparam {Number} maximum_nights Property's max nights reserved
  * @apiparam {Number} minimum_nights Property's min nights reserved
  * @apiparam {Number} extra_people Extra people allowed
- * @apiparam {Number} accomodates How many can this property accomodate
+ * @apiparam {Number} accommodates How many can this property accomodate
  * @apiparam {String} neighborbood Location of property
  * @apiparam {Number} beds How many beds the property has
  * @apiparam {String} property_type Property type
@@ -213,7 +209,7 @@
  * @apisuccess {Number} maximum_nights Property's max nights reserved
  * @apisuccess {Number} minimum_nights Property's min nights reserved
  * @apisuccess {Number} extra_people Extra people allowed
- * @apisuccess {Number} accomodates How many can this property accomodate
+ * @apisuccess {Number} accommodates How many can this property accomodate
  * @apisuccess {String} neighborbood Location of property
  * @apisuccess {Number} beds How many beds the property has
  * @apisuccess {String} property_type Property type
@@ -236,7 +232,7 @@
  *     "maximum_nights": 10,
  *     "minimum_nights": 3,
  *     "extra_people": 2,
- *     "accomodates": 6,
+ *     "accommodates": 6,
  *     "neighbourhood": "Mitte",
  *     "beds": 5,
  *     "property_type": "Apartment",
